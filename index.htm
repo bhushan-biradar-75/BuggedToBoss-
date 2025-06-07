@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //SSM
+        //Solve the star pattern problems using traditional loop
+        //****
+        //****
+        //****
+        
+        function drawPattern(n)
+        {
+            for(i=0; i<4; i++)
+            {
+                let row = ""
+                for(j=0; j<4; j++)
+            {
+                row = row + "*"
+            }
+            console.log(row);
+            }    
+        }
+        let argdrawPattern = 4;
+        let resultdrawPattern = drawPattern(argdrawPattern)
+
+        // *
+        // **
+        // ***
+        function drawonesidePattern(n)
+        {
+            for(i=0; i<3; i++)
+            {
+                let row = "*"
+                for(j=0; j<i; j++)
+            {
+                row = row + "*"
+            }
+            console.log(row);
+            }    
+        }
+        let argdrawonesidePattern = 4;
+        let resultdrawonesidePattern = drawonesidePattern(argdrawPattern)
+
+        //1
+        //12
+        //123
+        //1234
+        //12345
+
+        function drawNumberPattern(n)
+        {
+            for(i=0; i<n; i++)
+            {
+                let row = ""
+                for(j=0; j <= i; j++)
+            {
+                row =  row + (j + 1)
+            }
+            console.log(row);
+            }    
+        }
+        let argdrawNumberPattern = 5;
+        let resultdrawNumberPattern = drawNumberPattern(argdrawNumberPattern)
+
+        //0
+        //11
+        //222
+        //3333
+        //44444
+
+        function drawSameNo(n)
+        {
+            for(i=0; i<n; i++)
+            {
+                let row = ""
+                for(j=0; j <= i; j++)
+            {
+                row =  row + (i)
+            }
+            console.log(row);
+            }    
+        }
+        let argSamenoPattern = 5;
+        let resultdrawSameNoPattern = drawSameNo(argSamenoPattern)
+
+        function drawStartReversePattern(n)
+        {
+            for(i=n; i>0; i--)
+            {
+                let row = ""
+                for(j=0; j<i; j++)
+            {
+                row =  row + ("*")
+            }
+            console.log(row);
+            }    
+        }
+        let argStarReverse = 4;
+        let resultStarReversePattern = drawStartReversePattern(argStarReverse)
+
+        // 4444
+        // 333
+        // 22
+        // 1
+
+        // Solution 1
+
+        function drawReverseNo(n)
+        {
+            for(i=0 ; i<n; i++)
+            {
+                let row = ""
+                for(j=0; j < (n - i); j++)
+            {
+                row =  row + (i)
+            }
+            console.log(row);
+            }    
+        }
+        let argNo = 4;
+        let resultdrawReverseNo = drawReverseNo(argNo)
+
+        
+       //Solutuin 2
+        function drawReverseNoPattern(n)
+        {
+            for(i=n ; i>0; i--)
+            {
+                let row = ""
+                for(j=0; j < i; j++)
+            {
+                row =  row + (i)
+            }
+            console.log(row);
+            }    
+        }
+        let argNoReverse = 4;
+        let resultdrawNoPattern = drawReverseNoPattern(argNoReverse)
+
+        
+       
+       
+    </script>
+</body>
+</html>
