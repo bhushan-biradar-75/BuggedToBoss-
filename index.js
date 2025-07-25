@@ -68,3 +68,60 @@ const retunBuySellProfit = (prices) => {
 }
 const arr = [7,6,4,3,1]
 console.log(retunBuySellProfit(arr));
+
+//Find max consecutive one 
+
+const retrunMaxConsecutive = (input) => {
+  let currentCount = 0;
+  let maxCount = 0;
+  for(i = 0; i < input.length; i++)
+  {
+    if(input[i] == 1)
+    {
+      currentCount++;
+      
+    if(currentCount > maxCount)
+    {
+      maxCount = currentCount;
+    }
+    } else {
+      currentCount = 0;
+    }
+
+  }
+  return maxCount;
+}
+let inputretrunMaxConsecutive = [0,1,1,1,0,1,1,0,1,1,1,1,1]
+console.log(retrunMaxConsecutive(inputretrunMaxConsecutive));
+
+//268 - Find the missing no
+
+const retrunMissingNo = (input) => {
+  let n = input.length;
+  let totalSum = n * (n + 1) / 2;
+  let sum = 0;
+
+  for(i = 0; i < input.length; i++)
+  {
+    sum = input[i] + sum;
+  }
+
+  return totalSum - sum;
+}
+let inputretrunMissingNo1 = [3,0,1]
+let inputretrunMissingNo2 = [0,2]
+console.log(retrunMissingNo(inputretrunMissingNo2));
+
+// Find singal no in array
+
+const returnSingalNo = (input) => {
+  //Two ways of solving this problem first one with XOR with o(n) without space complexity
+  let xor = 0;
+  for(i = 0; i < input.length; i++)
+  {
+     xor = input[i] ^ xor;
+  } 
+  return xor;
+}
+let inputreturnSingalNo = [2,2,1,3,3];
+console.log(returnSingalNo(inputreturnSingalNo));
