@@ -46,3 +46,25 @@ function removeDuplicateElement(nums) {
 let inputremoveDuplicateElement = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
 let resultremoveDuplicateElement = removeDuplicateElement(inputremoveElement);
 console.log("resultremoveDuplicateElement", resultremoveDuplicateElement);
+
+//Buy & sell stock
+//Leetcode No - 121
+
+
+const retunBuySellProfit = (prices) => {
+  console.log(prices)
+  let min = prices[0];
+  let maxProfit = 0;
+  for(i = 0; i < prices.length; i++)
+  {
+    if(prices[i] - min > maxProfit)
+    {
+      maxProfit = prices[i];
+    }
+    if(prices[i] < min)
+      min = prices[i];
+  }
+  return maxProfit;
+}
+const arr = [7,6,4,3,1]
+console.log(retunBuySellProfit(arr));
