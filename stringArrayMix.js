@@ -51,3 +51,39 @@ function isPalindrom(str){
 }
 let isPalindromstr = "madam"
 console.log(isPalindrom(isPalindromstr));
+
+console.log({} + []);
+
+//Reverse the sentence
+
+function returnReverseSentence(word){
+    // let senetnceArray = [];
+    // let word = '';
+    let reversedsenetnce = '';
+    // let spiltSenetence = sentence.split(' ').reverse().join(', ');
+    // console.log(spiltSenetence);
+    // for(i = 0; sentence[i] !== undefined; i++)
+    // {
+    //     console.log("sen->",sentence[i])
+    //     if(sentence[i] == '')
+    //     {
+    //         console.log("senw ord",word)
+    //         reversedsenetnce = reversedsenetnce + word;
+    //         word = '';
+    //     } else {
+    //         word = word + sentence[i];
+    //     }
+    //     // senetnceArray[i] = sentence[i];
+    // }
+    console.log("sen word",word)
+    for(j = word.length - 1; j >= 0; j--)
+    {
+        console.log(word[j])
+        reversedsenetnce = reversedsenetnce + word[j];
+        // senetnceArray = 
+        
+    }
+    return reversedsenetnce;
+}
+let sentence = "i am in the interview";
+console.log("sen-> func retrun",returnReverseSentence(sentence));
