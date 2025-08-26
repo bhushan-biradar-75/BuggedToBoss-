@@ -106,3 +106,38 @@ function stringCounter(input){
 }
 let str = "aabbfgt"
 console.log(stringCounter(str));
+
+//Flatten the given array
+
+function flatten(arr, result = []) {
+    console.log(typeof arr)
+    if(!Array.isArray(arr)){
+        throw new TypeError("Provide a valid type")
+    }
+    
+
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      flatten(arr[i], result);   // just keep filling the same result
+    } else {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+
+let input = [[1,[2,3,[4,6],[5,6,7],[9]],0]];
+// console.log(flatten(input));
+// [1,2, 3, 4, 6, 5, 6, 7, 9,0]
+
+//With inbuild method 
+let input2 = [[1,[2,3,[4,6],[5,6,7],[9]],0]];
+const res = input2.flat(Infinity);
+// console.log("res",res)
+//// [1,2, 3, 4, 6, 5, 6, 7, 9,0]
+
+
+//Eval method example
+let a = 10;
+let b = 10;
+eval('var a= 10; var b = 30; console.log(a+b)')
